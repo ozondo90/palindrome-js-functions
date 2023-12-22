@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Word Checker</title>
+</head>
+<body>
+
+    <style>
+
+    </style>
+
+    <div class="wrapper">
+
+        <div class="main"></div>
+
+    </div>
+
+    <script>
+
+        /*
+            First methode : build 
+            palindrome checker with for loop
+        */
+        
+        // function getArrayFromWord(word){
+        //     return word.toLowerCase().split('')
+        // }
+        
+        // function isPalindrome(word){
+        //     const wordArray = getArrayFromWord(word)
+        //     let reverseCounter = wordArray.length - 1;
+        //     for(let i=0; i < wordArray.length/2; i++ ){
+        //         if(wordArray[i] !== wordArray[reverseCounter]){
+        //             return false
+        //         }else{
+        //             reverseCounter --
+        //         }
+        //     }
+
+        //     return true
+        // }
+
+        // console.log(isPalindrome("Bonjour"));
+
+
+        /*
+            Second methode : build 
+            palindrome checker with javascript
+            native methode
+        */
+            const reverseWord = (word) => word.toLowerCase()
+                                              .split('')
+                                              .reverse()
+                                              .join('');
+            function isPalindrome(word){
+                return word.toLowerCase() === reverseWord(word)
+            }
+
+            console.log(isPalindrome('orotoro'))
+
+
+
+    </script>
+    
+</body>
+</html>
